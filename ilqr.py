@@ -675,6 +675,8 @@ class IterativeLinearQuadraticRegulator():
             x:              (n,N) numpy array containing optimal state trajectory
             u:              (m,N-1) numpy array containing optimal control tape
             solve_time:     Total solve time in seconds
+            K:              (m,n,N-1) numpy array containing control feedback gain
+            kappa:          (m,N-1) numpy array containing control feedforward term
             optimal_cost:   Total cost associated with the (locally) optimal solution
         """
         # Store total cost and improvement in cost
@@ -707,7 +709,7 @@ class IterativeLinearQuadraticRegulator():
             L = L_new
             i += 1
 
-        return self.x_bar, self.u_bar, total_time, L
+        return self.x_bar, self.u_bar,self.K,self.kappa, total_time, L
 
     def SaveSolution(self, fname):
         """

@@ -12,7 +12,7 @@ by Vince Kurtz and Hai Lin, [https://arxiv.org/abs/2202.13986](https://arxiv.org
 Install the dependencies:
 - Python 3
 - Numpy
-- [Drake](https://drake.mit.edu/installation.html)
+- [Drake==1.23.0](https://drake.mit.edu/installation.html)
 
 Clone the repository:
 ```
