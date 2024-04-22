@@ -219,7 +219,7 @@ if optimize:
     ilqr.SetInitialGuess(u_guess)
 
     # Solve the optimization problem
-    states, inputs, solve_time, optimal_cost = ilqr.Solve()
+    states, inputs,_,_, solve_time, optimal_cost = ilqr.Solve()
     print(f"Solved in {solve_time} seconds using iLQR")
     print(f"Optimal cost: {optimal_cost}")
     timesteps = np.arange(0.0, T, dt)

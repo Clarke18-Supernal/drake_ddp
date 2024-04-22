@@ -155,7 +155,7 @@ def solve_ilqr(solver, x0, u_guess, move_target=False):
         x_nom[4] += target_vel*delta_t
         solver.SetTargetState(x_nom)
 
-    states, inputs, solve_time, optimal_cost = solver.Solve()
+    states, inputs,_,_, solve_time, optimal_cost = solver.Solve()
     return states, inputs, solve_time, optimal_cost
 
 # Set up the optimizer

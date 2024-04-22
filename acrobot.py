@@ -104,7 +104,7 @@ def solve_ilqr(solver, x0, u_guess):
     solver.SetInitialState(x0)
     solver.SetInitialGuess(u_guess)
 
-    states, inputs, solve_time, optimal_cost = solver.Solve()
+    states, inputs,_,_, solve_time, optimal_cost = solver.Solve()
     return states, inputs, solve_time, optimal_cost
 
 if method == "ilqr":

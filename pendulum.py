@@ -97,7 +97,7 @@ if method == "ilqr":
     u_guess = np.zeros((1,num_steps-1))
     ilqr.SetInitialGuess(u_guess)
 
-    states, inputs, solve_time, optimal_cost = ilqr.Solve()
+    states, inputs,_,_, solve_time, optimal_cost = ilqr.Solve()
     print(f"Solved in {solve_time} seconds using iLQR")
     print(f"Optimal cost: {optimal_cost}")
     timesteps = np.arange(0.0,T,dt)
